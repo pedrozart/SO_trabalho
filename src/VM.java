@@ -263,8 +263,35 @@ public class VM {
 			   new Word(Opcode.JMPIG, 5, 7, -1),
 			   new Word(Opcode.STOP, -1, -1, -1),
 	   };
+
+	   //faz o load do valor da posição 49 da memoria
 	   public Word[] p2 = new Word[] {
 
+			   new Word(Opcode.LDD, 0, -1, 49),
+			   new Word(Opcode.LDI, 1, -1, 22),//posiçãoi para fim 1
+			   new Word(Opcode.JMPIL, 1, 0, -1),//comparação
+			   new Word(Opcode.ADDI, 0, 0, 51),//adiciona o indice de memoria no nmr de elementos para saber o fim da memoria
+			   new Word(Opcode.STD, 1, -1, 49),
+			   new Word(Opcode.LDI, 0, -1, 0),
+			   new Word(Opcode.STD, 0, -1, 50),
+			   new Word(Opcode.LDI, 1, -1, 1),
+			   new Word(Opcode.STD, 1, -1, 51),
+			   new Word(Opcode.LDI, 7, -1, 52),
+			   new Word(Opcode.LDI, 5, -1, 11),
+			   new Word(Opcode.LDD, 6, -1, 49),//pegar da posição 49 da memoria o indice do fim do array
+			   new Word(Opcode.LDI, 2, -1, 1),
+			   new Word(Opcode.ADD, 2, 0, -1),
+			   new Word(Opcode.LDI, 0, -1, 0),
+			   new Word(Opcode.ADD, 0, 1, -1),
+			   new Word(Opcode.LDI, 1, 2, -1),
+			   new Word(Opcode.STX, 7, 1, -1),
+			   new Word(Opcode.ADD, 7, -1, 1),
+			   new Word(Opcode.SUB, 6, 7, -1),
+			   new Word(Opcode.JMPIG, 5, 7, -1),
+			   new Word(Opcode.STOP, -1, -1, -1),
+			   new Word(Opcode.LDI, 1, -1, -1),//pular aqui
+			   new Word(Opcode.STD, 1, 0, 49),
+			   new Word(Opcode.STOP, -1, -1, -1)
 	   };
 	   public Word[] p3 = new Word[] {
 
