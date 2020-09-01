@@ -294,7 +294,23 @@ public class VM {
 			   new Word(Opcode.STOP, -1, -1, -1)
 	   };
 	   public Word[] p3 = new Word[] {
-
+			new Word(Opcode.LDI, 0, -1, 5), //LDI R1, 5
+			new Word(Opcode.LDI, 1, -1, 13), //LDI R2, 13	
+		   	new Word(Opcode.LDI, 3, -1, 7), //LDI R4, 7
+			new Word(Opcode.LDI, 4, -1, 11), //LDI R5, 11													
+		   	new Word(Opcode.JMPIL, 1, 0, 999), //JMPIL R2, R0
+			new Word(Opcode.STD, 0, -1, 16), //STD R1, 51
+			new Word(Opcode.LDD, 2, -1, 16), //LDD R3, 51
+			new Word(Opcode.SUBI, 2, -1, 1), //SUBI R3, 1
+			new Word(Opcode.JMPIE, 4, 2, 999), //JMPIE R5, R3
+			new Word(Opcode.MULT, 0, 2, 999), //MULT R1, R3
+			new Word(Opcode.JMPIG, 3, 2, 999), //JMPIG R4, R3
+			new Word(Opcode.STD, 0, -1, 16), //STD R1, 51
+			new Word(Opcode.STOP, -1, -1, -1), //STOP
+			new Word(Opcode.LDI, 4, -1, -1), //LDI R5, -1
+			new Word(Opcode.STD, 4, -1, 17), //LDI R5, 52
+			new Word(Opcode.STOP, -1, -1, -1) //STOP
+	
 	   };
 	   public Word[] p4 = new Word[] {
 
